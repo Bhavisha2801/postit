@@ -12,5 +12,18 @@ module.exports = {
         topLevelAwait: true,
       }
       return config
+    },
+    async headers() {
+      return [
+        {
+          source: '/(.*)', // Match all routes
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'no-store, max-age=0', // Adjust as needed
+            },
+          ],
+        },
+      ]
     }
   }

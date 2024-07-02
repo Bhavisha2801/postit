@@ -3,7 +3,7 @@ import Link from "next/link";
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
-      <h1 className="head_text text-left"><span className="blue_gradient" >{type} Post</span></h1>
+      <h1 className="head_text text-left"><span className="yellow_gradient" >{type} Post</span></h1>
       <p className="desc text-left max-w-md">
         {type} and Share amazong prompts with the world, and let yout imagination run wild with any AI-powered platform.
       </p>
@@ -26,7 +26,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             Cancel
           </Link>
 
-          <button type="submit" disabled={submitting} className="px-5 py-1.5 text-sm bg-blue-600 rounded-full text-white">
+          <button type="submit" disabled={submitting} className="px-5 py-1.5 text-sm bg-yellow-600 rounded-full text-white">
               {submitting ? `${type}...` : type}
           </button>
         </div>

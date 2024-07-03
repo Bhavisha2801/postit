@@ -25,14 +25,20 @@ const Feed = () => {
   const handleSearchChange = () => {
   }
 
-  const fetchPosts = async () => {
-    const response = await fetch("/api/prompt")
-    const data = await response.json();
-
-    setPosts(data);
-  };
-
   useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("/api/prompt");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Failed to fetch posts:", error);
+      }
+    };
+  
     fetchPosts();
   }, []);
 

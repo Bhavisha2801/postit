@@ -28,7 +28,7 @@ module.exports = {
             },
             {
               key: 'Access-Control-Allow-Methods',
-              value: 'GET, POST, PUT, DELETE',
+              value: 'GET, POST, PATCH, DELETE',
             },
           ],
         },

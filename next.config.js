@@ -16,11 +16,19 @@ module.exports = {
     async headers() {
       return [
         {
-          source: '/(.*)', // Match all routes
+          source: '/api(.*)', // Match all routes
           headers: [
             {
               key: 'Cache-Control',
               value: 'no-store, max-age=0', // Adjust as needed
+            },
+            {
+              key: 'Access-Control-Allow-Origin',
+              value: '*',
+            },
+            {
+              key: 'Access-Control-Allow-Methods',
+              value: 'GET, POST, PUT, DELETE',
             },
           ],
         },

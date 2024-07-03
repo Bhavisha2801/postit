@@ -19,11 +19,8 @@ const PromptCardList = ({ data, handleTagClick }) => {
 
 const Feed = () => {
 
-  const [searchText, setSearchText] = useState('');
   const [posts, setPosts] = useState([]);
-
-  const handleSearchChange = () => {
-  }
+  let flag = false;
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -38,9 +35,11 @@ const Feed = () => {
         console.error("Failed to fetch posts:", error);
       }
     };
-  
+
+    flag = !flag;
+    
     fetchPosts();
-  }, []);
+  }, [flag]);
 
   return (
     <section className='feed'>

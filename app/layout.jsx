@@ -5,7 +5,7 @@ import Provider from '@components/Provider';
 
 export const metadata = {
     title: 'PostIt',
-    description: 'Discover & Share AI Prompts'
+    description: 'Discover & Create AI Prompts'
 }
 
 const RootLayout = ({ children }) => {

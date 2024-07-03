@@ -2,6 +2,7 @@
 
 import {useState, useEffect} from 'react'
 import PromptCard from './PromptCard';
+import Link from 'next/link';
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -49,10 +50,13 @@ const Feed = () => {
         <input type="text" placeholder='Search for a tag or a username' value={searchText} onChange={() => handleSearchChange()} required className='search_input peer' />
       </form> */}
 
-      <PromptCardList
+      {/* <PromptCardList
       data= {posts}
       // handleTagClick={() => {}}
- />
+ /> */}
+ <Link href="/profile" className="yellow_btn" >
+                    My Prompts
+                </Link>
      </section>
   )
 }

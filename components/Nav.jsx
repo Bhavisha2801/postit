@@ -33,6 +33,9 @@ const Nav = () => {
                 <Link href="/create-prompt" className="black_btn" >
                     Create Post
                 </Link>
+                <Link href="/profile" className="black_btn" >
+                    My Prompts
+                </Link>
                 <button type="button" onClick={signOut} className="outline_btn">
                     Sign Out
                 </button>
@@ -70,7 +73,7 @@ const Nav = () => {
                         <div className="dropdown">
                             <Link href='/profile' className="dropdown_link"
                             onClick={() => setToggleDropdown(false)}>
-                            My Profile
+                            My Prompts
                             </Link>
                             <Link href='/create-prompt' className="dropdown_link"
                             onClick={() => setToggleDropdown(false)}>
